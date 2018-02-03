@@ -1,10 +1,10 @@
 {
   "name": "schema2api",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "",
   "main": "index.js",
   "bin": {
-    "drumpf": "bin/index.js"
+    "schema2api": "bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
