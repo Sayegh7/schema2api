@@ -1,6 +1,20 @@
 {
-  "categories": {
-    "columns": ["category_id", "name"],
-    "pk": "category_id"
+  "categories": { "columns": ["category_id", "name"], "pk": "category_id" },
+  "clients": {
+    "columns": [
+      "client_id",
+      "first_name",
+      "last_name",
+      "phone_number",
+      "personal_id",
+      "dob",
+      "gender",
+      "place_of_birth",
+      "citizenship",
+      "photo",
+      "category_id",
+      "type"
+    ],
+    "pk": "client_id"
   }
 }
