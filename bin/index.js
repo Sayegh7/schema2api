@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-
-var lib= require('../lib/index.js');
-lib.play();
+var fs = require("fs");
+var lib = require("../lib/index.js");
+var file = process.argv[2];
+var content = fs.readFileSync(__dirname + "/" + file, "utf8");
+lib(JSON.parse(content));

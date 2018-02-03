@@ -1,6 +1,6 @@
 {
-  "name": "drumpf",
-  "version": "1.0.1",
+  "name": "schema2api",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -9,10 +9,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sayegh7/schema2api"
+  },
+
   "preferGlobal": "true",
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "play-sound": "^1.1.1"
-  }
+  "license": "ISC"
 }
