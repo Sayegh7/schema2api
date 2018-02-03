@@ -1,0 +1,31 @@
+[
+  {
+    "method": "get",
+    "endpoint": "/categories",
+    "query": "SELECT * FROM categories"
+  },
+  {
+    "method": "post",
+    "endpoint": "/categories",
+    "query":
+      "INSERT INTO categories (\"name\") VALUES ('{{ data.name }}') RETURNING *"
+  },
+  {
+    "method": "get",
+    "endpoint": "/categories/:category_id",
+    "query":
+      "SELECT *  FROM categories WHERE category_id={{ params.category_id }};"
+  },
+  {
+    "method": "delete",
+    "endpoint": "/categories/:category_id",
+    "query":
+      "DELETE  FROM categories WHERE category_id={{ params.category_id }};"
+  },
+  {
+    "method": "put",
+    "endpoint": "/categories/:category_id",
+    "query":
+      "UPDATE categories SET name = '{{ data.name }}' WHERE category_id={{ params.category_id }};SELECT *  FROM categories WHERE category_id={{ params.category_id }};"
+  }
+]

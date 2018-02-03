@@ -1,0 +1,6 @@
+{
+  "categories": {
+    "columns": ["category_id", "name"],
+    "pk": "category_id"
+  }
+}

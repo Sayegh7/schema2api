@@ -1,13 +1,13 @@
 {
   "name": "schema2api",
-  "version": "0.3.0",
+  "version": "0.5.0",
   "description": "",
   "main": "index.js",
   "bin": {
     "schema2api": "bin/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/index.js schema.json"
   },
   "repository": {
     "type": "git",
