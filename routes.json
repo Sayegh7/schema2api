@@ -14,19 +14,19 @@
     "method": "get",
     "endpoint": "/categories/:category_id",
     "query":
-      "SELECT *  FROM categories WHERE category_id={{ params.category_id }};"
+      "SELECT *  FROM categories WHERE category_id={{ data.params.category_id }};"
   },
   {
     "method": "delete",
     "endpoint": "/categories/:category_id",
     "query":
-      "DELETE  FROM categories WHERE category_id={{ params.category_id }};"
+      "DELETE  FROM categories WHERE category_id={{ data.params.category_id }};"
   },
   {
     "method": "put",
     "endpoint": "/categories/:category_id",
     "query":
-      "UPDATE categories SET name = '{{ data.name }}' WHERE category_id={{ params.category_id }};SELECT *  FROM categories WHERE category_id={{ params.category_id }};"
+      "UPDATE categories SET name = '{{ data.name }}' WHERE category_id={{ data.params.category_id }};SELECT *  FROM categories WHERE category_id={{ data.params.category_id }};"
   },
   { "method": "get", "endpoint": "/clients", "query": "SELECT * FROM clients" },
   {
@@ -38,17 +38,18 @@
   {
     "method": "get",
     "endpoint": "/clients/:client_id",
-    "query": "SELECT *  FROM clients WHERE client_id={{ params.client_id }};"
+    "query":
+      "SELECT *  FROM clients WHERE client_id={{ data.params.client_id }};"
   },
   {
     "method": "delete",
     "endpoint": "/clients/:client_id",
-    "query": "DELETE  FROM clients WHERE client_id={{ params.client_id }};"
+    "query": "DELETE  FROM clients WHERE client_id={{ data.params.client_id }};"
   },
   {
     "method": "put",
     "endpoint": "/clients/:client_id",
     "query":
-      "UPDATE clients SET first_name = '{{ data.first_name }}',last_name = '{{ data.last_name }}',phone_number = '{{ data.phone_number }}',personal_id = '{{ data.personal_id }}',dob = '{{ data.dob }}',gender = '{{ data.gender }}',place_of_birth = '{{ data.place_of_birth }}',citizenship = '{{ data.citizenship }}',photo = '{{ data.photo }}',category_id = '{{ data.category_id }}',type = '{{ data.type }}' WHERE client_id={{ params.client_id }};SELECT *  FROM clients WHERE client_id={{ params.client_id }};"
+      "UPDATE clients SET first_name = '{{ data.first_name }}',last_name = '{{ data.last_name }}',phone_number = '{{ data.phone_number }}',personal_id = '{{ data.personal_id }}',dob = '{{ data.dob }}',gender = '{{ data.gender }}',place_of_birth = '{{ data.place_of_birth }}',citizenship = '{{ data.citizenship }}',photo = '{{ data.photo }}',category_id = '{{ data.category_id }}',type = '{{ data.type }}' WHERE client_id={{ data.params.client_id }};SELECT *  FROM clients WHERE client_id={{ data.params.client_id }};"
   }
 ]
