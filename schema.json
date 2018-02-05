@@ -1,5 +1,5 @@
 {
-  "categories": { "columns": ["category_id", "name"], "pk": "category_id" },
+  "categories": { "columns": ["category_id", "name"], "pk": "" },
   "clients": {
     "columns": [
       "client_id",

@@ -8,7 +8,7 @@
     "method": "post",
     "endpoint": "/categories",
     "query":
-      "INSERT INTO categories (\"name\") VALUES ('{{ data.name }}') RETURNING *"
+      "INSERT INTO categories (\"category_id\",\"name\") VALUES ('{{ data.category_id }}','{{ data.name }}') RETURNING *"
   },
   {
     "method": "get",
@@ -26,7 +26,7 @@
     "method": "put",
     "endpoint": "/categories/:category_id",
     "query":
-      "UPDATE categories SET name = '{{ data.name }}' WHERE category_id={{ data.params.category_id }};SELECT *  FROM categories WHERE category_id={{ data.params.category_id }};"
+      "UPDATE categories SET category_id = '{{ data.category_id }}',name = '{{ data.name }}' WHERE category_id={{ data.params.category_id }};SELECT *  FROM categories WHERE category_id={{ data.params.category_id }};"
   },
   { "method": "get", "endpoint": "/clients", "query": "SELECT * FROM clients" },
   {
